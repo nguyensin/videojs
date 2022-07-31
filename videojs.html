@@ -1,0 +1,31 @@
+<head>
+    <link href="https://vjs.zencdn.net/7.20.1/video-js.css" rel="stylesheet" />
+
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+</head>
+
+<body style="background-color:rgb(0, 0, 0);">
+    <video id="my-video" autoplay muted playsinline class="video-js vjs-fluid" controls preload="auto" width="100vw"
+        height="100vh" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+        <source
+            src="https://05bce4580d95b32a.mediapackage.ap-southeast-1.amazonaws.com/out/v1/2318c3ca62e44870ba98c2d2e30e2eff/index.m3u8"
+            type="application/x-mpegURL" />
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+
+    <script src="https://vjs.zencdn.net/7.20.1/video.min.js"></script>
+
+    <script>
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var link = url.searchParams.get("link");
+
+        var video = videojs("my-video");
+        video.src(link);
+    </script>
+</body>
