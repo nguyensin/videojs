@@ -23,7 +23,12 @@
         var url = new URL(url_string);
         var link = url.searchParams.get("link");
 
-        var video = videojs("my-video");
+        var video = videojs("my-video", {
+            controlBar: {
+                fullscreenToggle: false,
+                playToggle: false
+            }
+        });
         video.src(link);
         video.play();
     </script>
