@@ -17,10 +17,6 @@
         var url_string = window.location.href;
         var url = new URL(url_string);
         var link = url.searchParams.get("link");
-        var live = document.getElementById("live");
-        live.src = link;
-        live.ontouchmove = function (event) {
-            event.preventDefault();
-        }
+        document.getElementById('live').src = link;
     </script>
 </body>
