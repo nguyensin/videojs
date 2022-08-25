@@ -8,6 +8,10 @@
             height: 100vh;
             margin: 0;
         }
+
+        .vjs-tech {
+            pointer-events: none;
+        }
     </style>
 
     <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
@@ -39,8 +43,7 @@
             },
             html5: {
                 nativeTextTracks: false
-            },
-            disableVideoPlayPauseClick: true
+            }
         });
         video.src(link);
         video.play();
