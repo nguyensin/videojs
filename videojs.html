@@ -34,7 +34,11 @@
         var video = videojs("my-video", {
             controlBar: {
                 fullscreenToggle: false,
-                playToggle: false
+                playToggle: false,
+                pictureInPictureToggle: false
+            },
+            html5: {
+                nativeTextTracks: false
             }
         });
         video.src(link);
